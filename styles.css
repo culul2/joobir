@@ -1,0 +1,109 @@
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}body {
+    font-family: Arial, sans-serif;
+    background-image: url('eagle-background.jpg'); /* Replace with your eagle image URL */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed background for a parallax effect */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+}
+
+.shiny-text {
+    color: gold;
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px gold;
+    animation: shine 1.5s infinite alternate;
+}
+
+@keyframes shine {
+    0% { text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px gold; }
+    100% { text-shadow: 0 0 15px white, 0 0 20px gold, 0 0 30px yellow; }
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+section {
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for sections */
+    border-radius: 10px;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.blog-box, .comment-box, .chat-box {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+#discussion-display, #comments-display {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+#comments-display p {
+    margin: 5px 0;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}h2, h3, p {
+    font-style: italic; /* Make all h2, h3, and p elements italic */
+}

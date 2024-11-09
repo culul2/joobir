@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culul - Science Knowledge and Philosophy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="shiny-text">Culul</h1>
+        <nav>
+            <a href="#blog">Blog</a>
+            <a href="#discussion">Discussion</a>
+            <a href="#upload">Upload</a>
+            <a href="#contact">Contact</a>
+            <a href="#resources">Resources</a>
+            <a href="#login">Login with Google</a>
+        </nav>
+        <div class="language-selector">
+            <label for="language">Select Language:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English (UK)</option>
+                <option value="om">Afaan Oromo</option>
+                <option value="am">Amharic</option>
+            </select>
+        </div>
+    </header>
+
+    <section id="blog">
+        <h2><em>Blog</em></h2>
+        <div class="blog-box">
+            <p><em>Welcome to the blog section! Here you can find various posts and updates on natural and social sciences.</em></p>
+        </div>
+    </section>
+
+    <section id="discussion">
+        <h2><em>Discussion Blog</em></h2>
+        <textarea id="discussion-input" placeholder="Write your discussion (500-1000 words)..." maxlength="1000></textarea>
+        <button onclick="submitDiscussion()">Submit Discussion</button>
+        <div id="discussion-display"></div>
+
+        <h3><em>Comments</em></h3>
+        <textarea id="comment-input" placeholder="Leave a comment..."></textarea>
+        <button onclick="submitComment()">Submit Comment</button>
+        <div id="comments-display"></div>
+    </section>
+
+    <section id="upload">
+        <h2><em>Upload Files</em></h2>
+        <input type="file" id="file-upload" multiple>
+        <button onclick="uploadFiles()">Upload</button>
+    </section>
+
+    <section id="contact">
+        <h2><em>Contact Us</em></h2>
+        <p>Email: contact@culul.com</p>
+        <p>Social Media: 
+            <a href="https://twitter.com/culul" target="_blank">Twitter</a>,
+            <a href="https://facebook.com/culul" target="_blank">Facebook</a>
+        </p>
+        <div id="map" style="width:100%;height:400px;"></div>
+        <script>
+            function initMap() {
+                const location = { lat: -34.397, lng: 150.644 }; // Example coordinates
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 8,
+                    center: location,
+                });
+                new google.maps.Marker({
+                    position: location,
+                    map: map,
+                });
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        </script>
+    </section>
+
+    <section id="resources">
+        <h2><em>Resources</em></h2>
+        <ul>
+            <li><a href="gumbi.html"><em>Gumbi</em></a></li>
+            <li><a href="lookoo.html"><em>Lookoo</em></a></li>
+            <li><a href="gumbichu.html"><em>Gumbichu</em></a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Culul. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
